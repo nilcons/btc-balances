@@ -1,0 +1,6 @@
+/txout*
+/parse
+/output
+
+# Setup from sysadmin: symlink cli.sh to a bitcoin-cli with correct datadir and "$@"
+/cli.sh
