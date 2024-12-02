@@ -12,6 +12,8 @@ if ! tty >/dev/null; then
     exec 2>output/log
 fi
 
+make
+
 rm -f txoutset txoutset.incomplete
 mkfifo txoutset.incomplete
 ./parse <txoutset.incomplete | awk '{print $0 > "output/" substr($0,0,6)}' &
